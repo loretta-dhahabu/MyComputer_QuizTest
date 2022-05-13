@@ -1,0 +1,110 @@
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* home section styling*/
+.home{
+   width: 100%;
+   height: 100vh;
+   min-height: 500px;
+   background: cornflowerblue;
+   font-size: 18px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   font-family: sans-serif;
+}
+.home.max-width{
+    display: flex;
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto 0 auto 40px;
+}
+.home-content{
+    max-width: 500px;
+    margin-left: 100px;
+    text-align: center;
+}
+.home-content > h1{
+    font-family: sans-serif;
+    text-shadow: 0px 0px 300px #000;
+    font-size: 18px;
+    margin-bottom: 50px;
+    margin-top: -100px;
+}
+.home-content > .btn{
+    border-radius: 10px;
+    font-family: verdana;
+    font-size: 16px;
+    border: 3px solid;
+    background-color: darkorange;
+    width: 120px;
+    height: 40px;
+    text-transform: uppercase;
+}
+.home-content > .btn:hover{
+    background-color: hotpink;
+    cursor: pointer;
+}
+.btn > a{
+    color: #000;
+}
+.btn > a:hover{
+    color: antiquewhite;
+}
+/*the start of media query*/
+@media (max-width: 800px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .home{
+        padding: 0 70px;
+        background-color: aqua;
+    }
+    .home-content{
+        background-color: aliceblue;
+    }
+    .home-content > h1{
+        font-size: 30px;
+    }
+    .home-content > .btn{
+        font-family: sans-serif;
+        font-size: 20px;
+        background-color: yellow;
+        width: 140px;
+        height: 50px;
+    }
+
+}
+.quiz{
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background: white;
+    font-size: 18px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+ }
+ .quiz.max-width{
+     display: flex;
+     max-width: 1300px;
+     padding: 0 80px;
+     margin: auto 0 auto 40px;
+ }
+ .quiz-content{
+     max-width: 500px;
+     margin-left: 100px;
+     text-align: center;
+ }
+ 
