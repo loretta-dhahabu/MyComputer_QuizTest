@@ -13,13 +13,31 @@ var questions = [
       ["Q 2 - Which of the following is a valid type of function javascript supports?","named function","anonymous function","both of the above","none of the above","C"],
       ["Q 3 - Which built-in method returns the character at the specified index?","characterAt()","getCharAt()", "charAt()", "None of the above", "C"],
       ["Q 4 - Which built-in method returns the calling string value converted to upper case?","toUpperCase()"," toUpper()"," changeCase(case)","None of the above.","A",],
-      ["","","","","","",],
-      ["","","","","","",],
-      ["","","","","","",],
-      ["","","","","","",],
-      ["","","","","","",],
-      ["","","","","","",]
+      ["Q 5 - Which of the following function of Number object returns the number's value?","toString()","valueOf()"," toLocaleString()"," toPrecision()","B",],
+      ["Q 6 - Which of the following function of String object returns the index within the calling String object of the last occurrence of the specified value?","lastIndexOf()","search()","substr()"," indexOf()","A",],
+      ["Q 7 - Which of the following function of String object creates a string to be displayed as bold as if it were in a <b> tag?","anchor()","big()","blink()","bold()","D",],
+      ["Q 8 - Which of the following function of String object causes a string to be displayed as a subscript, as if it were in a <sub> tag?","sup()","small()","strike()","sub()","D",],
+      ["Q 9 - Which of the following function of Array object calls a function for each element in the array?","concat()","every()","filter()","forEach()","D",],
+      ["Q 10 - Which of the following function of Array object removes the first element from an array and returns that element?","reverse()","shift()","slice()","some()","B",]
 
-];
+]
+function _(){
+    return document.getElementById(x);
+}
+function renderQuestion() {
+    test = _("test");
+    _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+    question = questions[pos][0];
+    chA = questions[pos][1];
+    chB = questions[pos][2];
+    chC = questions[pos][3];
+    chD = questions[pos][4];
+    test.innerHTML = "<h3>"+question+"</h3>";
+    test.innerHTML +="<input type='radio' name='choices' value'A'> "+chA+"<br>"; 
+    test.innerHTML +="<input type='radio' name='choices' value'B'> "+chB+"<br>"; 
+    test.innerHTML +="<input type='radio' name='choices' value'C'> "+chC+"<br>";  
+    test.innerHTML +="<input type='radio' name='choices' value'D'> "+chD+"<br>";  
+
+}
 
     
