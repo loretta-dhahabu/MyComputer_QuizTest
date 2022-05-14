@@ -20,9 +20,9 @@ var questions = [
       ["Q 9 - Which of the following function of Array object calls a function for each element in the array?","concat()","every()","filter()","forEach()","D",],
       ["Q 10 - Which of the following function of Array object removes the first element from an array and returns that element?","reverse()","shift()","slice()","some()","B",]
 
-]
-function _(){
-    return document.getElementById(x);
+];
+function _(quiz){
+    return document.getElementById(quiz);
 }
 function renderQuestion() {
     test = _("test");
@@ -40,22 +40,22 @@ function renderQuestion() {
     chC = questions[pos][3];
     chD = questions[pos][4];
     test.innerHTML = "<h3>"+question+"</h3>";
-    test.innerHTML +="<input type='radio' name='choices' value'A'> "+chA+"<br>"; 
-    test.innerHTML +="<input type='radio' name='choices' value'B'> "+chB+"<br>"; 
-    test.innerHTML +="<input type='radio' name='choices' value'C'> "+chC+"<br>";  
-    test.innerHTML +="<input type='radio' name='choices' value'D'> "+chD+"<br><br>";  
+    test.innerHTML +="<input type='radio' name='choices' value='A'> "+chA+"<br>"; 
+    test.innerHTML +="<input type='radio' name='choices' value='B'> "+chB+"<br>"; 
+    test.innerHTML +="<input type='radio' name='choices' value='C'> "+chC+"<br>";  
+    test.innerHTML +="<input type='radio' name='choices' value='D'> "+chD+"<br><br>";  
     test.innerHTML +="button onclick='checkAnswer()'>Submit Answer</button>";
 
 }
 function checkAnswer () {
-    alert("OK we will");
-    choices = document.getElementsByName("choices");
+
+    var choices = document.getElementsByName("choices");
     for (var i=0; i<choices.length; i++){
         if (choices[i].checked){
-            choice = choices[i].ariaValueMax;
+            choice = choices[i].arialValueMax;
         }
     }
-    if(choice == questions [pos] [10]){
+    if(choice == questions [pos] [5]){
         correct++;
         
     }

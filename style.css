@@ -107,4 +107,9 @@
      margin-left: 100px;
      text-align: center;
  }
+ #test{
+     border: #000 1px solid;
+     padding: 10px 40px 40px 40px;
+
+ }
  
