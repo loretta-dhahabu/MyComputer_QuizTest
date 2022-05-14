@@ -184,3 +184,10 @@
     color: green;
     display: none;
 }
+button{
+    float: right;
+    margin: 0 5px;
+}
+#previous{
+    
+}
