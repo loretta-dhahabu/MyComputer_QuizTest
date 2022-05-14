@@ -120,62 +120,62 @@
 
 .questionone {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     margin-bottom: 10px;
 }
 
 .questiontwo {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionthree {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionfour {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionfive {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionsix {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionseven{
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questioneight {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionnine {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionten {
     border: 1px solid red;
-    padding: 20px;
+    padding: 70px;
     width: fit-content;
     display: none;
 }
@@ -187,7 +187,9 @@
 button{
     float: right;
     margin: 0 5px;
-}
-#previous{
-    
+    margin-top: 30px;
+    background-color: aqua;
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
 }
