@@ -137,6 +137,12 @@
     width: fit-content;
     display: none;
 }
+.questionfour {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
 
 .message {
     color: green;
