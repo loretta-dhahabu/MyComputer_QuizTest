@@ -41,7 +41,7 @@
     margin-bottom: 50px;
     margin-top: -100px;
 }
-.home-content > .btn{
+.home-content > #btn{
     border-radius: 10px;
     font-family: verdana;
     font-size: 16px;
@@ -51,14 +51,14 @@
     height: 40px;
     text-transform: uppercase;
 }
-.home-content > .btn:hover{
+.home-content > #btn:hover{
     background-color: hotpink;
     cursor: pointer;
 }
-.btn > a{
+#btn > a{
     color: #000;
 }
-.btn > a:hover{
+#btn > a:hover{
     color: antiquewhite;
 }
 /*the start of media query*/
@@ -76,7 +76,7 @@
     .home-content > h1{
         font-size: 30px;
     }
-    .home-content > .btn{
+    .home-content > #btn{
         font-family: sans-serif;
         font-size: 20px;
         background-color: yellow;
@@ -105,7 +105,6 @@
  .quiz-content{
      max-width: 500px;
      margin-left: 100px;
-     text-align: center;
  }
  #test{
      border: #000 1px solid;
