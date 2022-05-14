@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct = 0;
 var questions = [
-      ["Q 1 - Is JavaScript a case-sensitive language?","true","false","A"],
+      ["Q 1 - Which method returns the string starting at the specified position?","substr()","getSubstring()", "slice()", "None of the above","A"],
       ["Q 2 - Which of the following is a valid type of function javascript supports?","named function","anonymous function","both of the above","none of the above","C"],
       ["Q 3 - Which built-in method returns the character at the specified index?","characterAt()","getCharAt()", "charAt()", "None of the above", "C"],
       ["Q 4 - Which built-in method returns the calling string value converted to upper case?","toUpperCase()"," toUpper()"," changeCase(case)","None of the above.","A",],
@@ -28,6 +28,7 @@ function renderQuestion() {
     test = _("test");
     if(pos >= questions.length){
         test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct </h2>";
+        
         _("test_status").innerHTML = "Test Completed";
         pos = 0;
         correct = 0;
@@ -44,7 +45,7 @@ function renderQuestion() {
     test.innerHTML +="<input type='radio' name='choices' value='B'> "+chB+"<br>"; 
     test.innerHTML +="<input type='radio' name='choices' value='C'> "+chC+"<br>";  
     test.innerHTML +="<input type='radio' name='choices' value='D'> "+chD+"<br><br>";  
-    test.innerHTML +="button onclick='checkAnswer()'>Submit Answer</button>";
+    test.innerHTML +="<button onclick='checkAnswer()'>Submit Answer</button>";
 
 }
 function checkAnswer () {
