@@ -86,14 +86,13 @@
 
 }
 .quiz{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 500px;
     background: white;
     font-size: 18px;
     margin: auto;
     display: flex;
-    align-items: center;
     font-family: sans-serif;
  }
  .quiz.max-width{
@@ -103,12 +102,37 @@
      margin: auto 0 auto 40px;
  }
  .quiz-content{
-     max-width: 500px;
+     max-width: 600px;
      margin-left: 100px;
+ }
+ .quiz-content > h5>.card-text{
+     float: right;
+     margin-right: -100px;
  }
  #test{
      border: #000 1px solid;
      padding: 10px 40px 40px 40px;
 
  }
+
  
+/* Basic styling */
+
+.questionone {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.questiontwo {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+
+.message {
+    color: green;
+    display: none;
+}

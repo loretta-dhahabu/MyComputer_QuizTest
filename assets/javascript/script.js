@@ -11,6 +11,8 @@ $(document).ready(function(){
 $('#btn').on('click', function(){
     console.log("You're about to start!");
 })
+var time=30;
+var timer;
 var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct = 0;
 var questions = [
       ["- Which method returns the string starting at the specified position?","substr()","getSubstring()", "slice()", "None of the above","A"],
@@ -54,6 +56,7 @@ function renderQuestion() {
     test.innerHTML +="<button onclick='back()'>Previous Quiz</button>";
 
 }
+
 function back() {
     choices = document.getElementsByName("choices");
     for (var i=0; i<choices.length; i++)
@@ -94,5 +97,6 @@ function checkAnswer () {
     renderQuestion() ;
 }
 window.addEventListener("load",renderQuestion, false);
+
 
     
