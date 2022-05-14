@@ -143,6 +143,42 @@
     width: fit-content;
     display: none;
 }
+.questionfive {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+.questionsix {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+.questionseven{
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+.questioneight {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+.questionnine {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
+.questionten {
+    border: 1px solid red;
+    padding: 20px;
+    width: fit-content;
+    display: none;
+}
 
 .message {
     color: green;
