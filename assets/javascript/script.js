@@ -223,7 +223,7 @@ submitOne.onclick = () => {
 
     if(oneCorrectAnswer === 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -231,7 +231,7 @@ submitOne.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks=marks
+        marks=0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -262,7 +262,7 @@ submitTwo.onclick = () => {
 
     if(twoCorrectAnswer === 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -270,7 +270,7 @@ submitTwo.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -302,7 +302,7 @@ submitThree.onclick = () => {
 
     if(threeCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -310,7 +310,7 @@ submitThree.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -318,7 +318,7 @@ submitThree.onclick = () => {
 }
 
 var answerThirteen = document.getElementById('answerthirteen')
-var answerFourteen= document.getElementById('answertfourteen')
+var answerFourteen= document.getElementById('answerfourteen')
 var answerFifteen = document.getElementById('answerfifteen')
 var answerSixteen = document.getElementById('answersixteen')
 
@@ -329,7 +329,7 @@ submitFour.onclick = () => {
 
         fourCorrectAnswer = 'correctanswer'
     }
-    else if( answerFourteen.checked == true){
+    else if(answerFourteen.checked == true){
 
         fourCorrectAnswer = 'notcorect'
     }
@@ -342,7 +342,7 @@ submitFour.onclick = () => {
 
     if(oneCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -350,7 +350,7 @@ submitFour.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -382,7 +382,7 @@ submitFive.onclick = () => {
 
     if(fiveCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -390,7 +390,7 @@ submitFive.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -422,7 +422,7 @@ submitSix.onclick = () => {
 
     if(sixCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -430,7 +430,7 @@ submitSix.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -466,7 +466,7 @@ submitSeven.onclick = () => {
     if(
         sevenCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -474,7 +474,7 @@ submitSeven.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -506,7 +506,7 @@ submitEight.onclick = () => {
 
     if(eightCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -514,7 +514,7 @@ submitEight.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -546,7 +546,7 @@ submitNine.onclick = () => {
 
     if(nineCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -554,7 +554,7 @@ submitNine.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
@@ -586,7 +586,7 @@ submitTen.onclick = () => {
 
     if(tenCorrectAnswer == 'correctanswer') {
 
-        marks++
+        marks=1
         answers.push(marks);
         console.log(marks);
         console.log(answers);
@@ -594,13 +594,14 @@ submitTen.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = marks
+        marks = 0
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
 
+for()
 
 //RESULTS COMPILATION
 var result=document.getElementById("result");
@@ -611,7 +612,7 @@ var stat=document.getElementById("stat");
 var i=0;
 var results=0;
 
-//function in display quizes
+
 
 
 
