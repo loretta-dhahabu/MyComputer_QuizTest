@@ -144,8 +144,10 @@ function calcResults(e){
   setTimeout(nextQuestion,300);
 }
 //back to quiz button event
-function backToQuiz(){
-    location.reload();
+resultsBtn.onclick = () => {
+    result.style.display = 'none'
+    questionTwo.style.display = 'none'
+    questionOne.style.display = 'block'
 }
 //check answers button event
 function checkAnswer(){
