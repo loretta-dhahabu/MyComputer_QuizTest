@@ -93,14 +93,17 @@ nextone.onclick = () => {
 
     questionOne.style.display = 'none'
     questionTwo.style.display = 'block'
+    result.style.display = 'none'
 }
 nexttwo.onclick = () => {
     questionTwo.style.display = 'none'
     questionThree.style.display = 'block'
+    result.style.display = 'none'
 }
 nextthree.onclick = () => {
     questionThree.style.display = 'none'
     questionFour.style.display = 'block'
+    result.style.display = 'none'
 }
 nextfour.onclick = () => {
     questionFour.style.display = 'none'
@@ -117,14 +120,17 @@ nextsix.onclick = () => {
 nextseven.onclick = () => {
     questionSeven.style.display = 'none'
     questionEight.style.display = 'block'
+    result.style.display = 'none'
 }
 nexteight.onclick = () => {
     questionEight.style.display = 'none'
     questionNine.style.display = 'block'
+    result.style.display = 'none'
 }
 nextnine.onclick = () => {
     questionNine.style.display = 'none'
     questionTen.style.display = 'block'
+    result.style.display = 'none'
 }
 nextten.onclick = () => {
     questionTen.style.display = 'none'
@@ -149,18 +155,6 @@ resultsBtn.onclick = () => {
     questionTwo.style.display = 'none'
     questionOne.style.display = 'block'
 }
-//check answers button event
-function checkAnswer(){
-    var answerBank=document.getElementById("answerBank");
-    var answers=document.getElementById("answers");
-    answerBank.style.display='block';
-    result.style.display='block';
-    for (var a=0;a<questionBank.length;a++)
-    {
-       var list=document.createElement('li');
-       list.innerHTML=questionBank[a].answer;
-    }
-}
 
 // SUBMIT QUESTIONS
 var submitOne = document.getElementById('submitone');
@@ -184,7 +178,31 @@ var answerFour = document.getElementById('answerfour')
 // SUBMIT EVENTLISTNERS;
 
 var answers = [];
-var marks = 0
+var marks = 0;
+// var q1 =document.questionOne.answer;
+// var q2 =document.questionOne.answer;
+// var q3 =document.questionOne.answer;
+// var q4 =document.questionOne.answer;
+// var q5 =document.questionOne.answer;
+// var q6 =document.questionOne.answer;
+// var q7 =document.questionOne.answer;
+// var q8 =document.questionOne.answer;
+// var q9 =document.questionOne.answer;
+// var q10 =document.questionOne.answer;
+// var result =document.getElementById('result');
+
+// if (q1=="substr()") {marks++}
+// if (q1=="both of the above") {marks++}
+// if (q1=="charAt()") {marks++}
+// if (q1=="toUpperCase()") {marks++}
+// if (q1=="toString()") {marks++}
+// if (q1=="indexOf()") {marks++}
+// if (q1=="bold()") {marks++}
+// if (q1=="sub()") {marks++}
+// if (q1=="forEach()") {marks++}
+// if (q1=="shift()") {marks++}
+
+// result.textContent="$()"
 submitOne.onclick = () => {
 
      
@@ -203,7 +221,7 @@ submitOne.onclick = () => {
         oneCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(oneCorrectAnswer === 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -213,31 +231,36 @@ submitOne.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks=marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+var answerFive = document.getElementById('answerfive')
+var answerSix = document.getElementById('answersix')
+var answerSeven = document.getElementById('answerseven')
+var answerEight = document.getElementById('answereight')
+
 submitTwo.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerFive.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        twoCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerSix.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        twoCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'correctanswer'
+    else if(answerSeven.checked == true) {
+        twoCorrectAnswer = 'correctanswer'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        twoCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(twoCorrectAnswer === 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -247,31 +270,37 @@ submitTwo.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerNine = document.getElementById('answernine')
+var answerTen = document.getElementById('answerten')
+var answerEleven = document.getElementById('answereleven')
+var answerTwelve = document.getElementById('answertwelve')
+
 submitThree.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerNine.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        threeCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerTen.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        threeCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'correctanswer'
+    else if(answerEleven.checked == true) {
+        threeCorrectAnswer = 'correctanswer'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        threeCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(threeCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -281,28 +310,34 @@ submitThree.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerThirteen = document.getElementById('answerthirteen')
+var answerFourteen= document.getElementById('answertfourteen')
+var answerFifteen = document.getElementById('answerfifteen')
+var answerSixteen = document.getElementById('answersixteen')
+
 submitFour.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerThirteen.checked == true) {
 
-        oneCorrectAnswer = 'correctanswer'
+        fourCorrectAnswer = 'correctanswer'
     }
-    else if( answerTwo.checked == true){
+    else if( answerFourteen.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        fourCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerFifteen.checked == true) {
+        fourCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        fourCorrectAnswer = 'notcorect'
     }
 
     if(oneCorrectAnswer == 'correctanswer') {
@@ -315,31 +350,37 @@ submitFour.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerSeventeen = document.getElementById('answerseventeen')
+var answerEighteen = document.getElementById('answereighteen')
+var answerNineteen = document.getElementById('answernineteen')
+var answerTwenty = document.getElementById('answertwenty')
+
 submitFive.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerSeventeen.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        fiveCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerEighteen.checked == true){
 
-        oneCorrectAnswer = 'correctanswer'
+        fiveCorrectAnswer = 'correctanswer'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerNineteen.checked == true) {
+        fiveCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        fiveCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(fiveCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -349,31 +390,37 @@ submitFive.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerTwentyOne = document.getElementById('answertwentyone')
+var answerTwentyTwo= document.getElementById('answertwentytwo')
+var answerTwentyThree = document.getElementById('answertwentythree')
+var answerTwentyFour = document.getElementById('answertwentyfour')
+
 submitSix.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerTwentyOne.checked == true) {
 
-        oneCorrectAnswer = 'correctanswer'
+        sixCorrectAnswer = 'correctanswer'
     }
-    else if( answerTwo.checked == true){
+    else if( answerTwentyTwo.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        sixCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerTwentyThree.checked == true) {
+        sixCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        sixCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(sixCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -383,31 +430,41 @@ submitSix.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerTwentyFive = document.getElementById('answertwentyfive')
+var answerTwentySix = document.getElementById('answertwentysix')
+var answerTwentySeven = document.getElementById('answertwentyseven')
+var answerTwentyEight = document.getElementById('answertwentyeight')
+
 submitSeven.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerTwentyFive.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        sevenCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerTwentySix.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+       
+        sevenCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerTwentySeven.checked == true) {
+        
+        sevenCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'correctanswer'
+        
+        sevenCorrectAnswer = 'correctanswer'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(
+        sevenCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -417,31 +474,37 @@ submitSeven.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerTwentyNine = document.getElementById('answertwentynine')
+var answerThirty = document.getElementById('answerthirty')
+var answerThirtyOne = document.getElementById('answerthirtyone')
+var answerThirtyTwo = document.getElementById('answerthirtytwo')
+
 submitEight.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerTwentyNine.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        eightCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerThirty.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        eightCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerThirtyOne.checked == true) {
+        eightCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'correctanswer'
+        eightCorrectAnswer = 'correctanswer'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(eightCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -451,31 +514,37 @@ submitEight.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerThirtyThree = document.getElementById('answerthirtythree')
+var answerThirtyFour = document.getElementById('answerthirtyfour')
+var answerThirtyFive = document.getElementById('answerthirtyfive')
+var answerThirtySix = document.getElementById('answerthirtysix')
+
 submitNine.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerThirtyThree.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        nineCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerThirtyFour.checked == true){
 
-        oneCorrectAnswer = 'notcorect'
+        nineCorrectAnswer = 'notcorect'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerThirtyFive.checked == true) {
+        nineCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'correctanswer'
+        nineCorrectAnswer = 'correctanswer'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(nineCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -485,31 +554,37 @@ submitNine.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
     }
 }
+
+var answerThirtySeven = document.getElementById('answerthirtyseven')
+var answerThirtyEight = document.getElementById('answerthirtyeight')
+var answerThirtyNine = document.getElementById('answerthirtynine')
+var answerFourty = document.getElementById('answerfourty')
+
 submitTen.onclick = () => {
 
      
-    if(answerOne.checked == true) {
+    if(answerThirtySeven.checked == true) {
 
-        oneCorrectAnswer = 'notcorect'
+        tenCorrectAnswer = 'notcorect'
     }
-    else if( answerTwo.checked == true){
+    else if( answerThirtyEight.checked == true){
 
-        oneCorrectAnswer = 'correctanswer'
+        tenCorrectAnswer = 'correctanswer'
     }
-    else if(answerThree.checked == true) {
-        oneCorrectAnswer = 'notcorect'
+    else if(answerThirtyNine.checked == true) {
+        tenCorrectAnswer = 'notcorect'
     }
     else {
-        oneCorrectAnswer = 'notcorect'
+        tenCorrectAnswer = 'notcorect'
     }
 
-    if(oneCorrectAnswer == 'correctanswer') {
+    if(tenCorrectAnswer == 'correctanswer') {
 
         marks++
         answers.push(marks);
@@ -519,7 +594,7 @@ submitTen.onclick = () => {
         message.style.display = 'block'
     }
     else {
-        marks = 0
+        marks = marks
         answers.push(marks)
         console.log(marks);
         console.log(answers);
