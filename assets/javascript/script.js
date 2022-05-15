@@ -1,102 +1,538 @@
 $(document).ready(function(){
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.home').addClass("home.content");
-        }else{
-            $('.home').removeClass("home.content");
-        }
-    })
+    $("button").click(function(){
+
+    });      
 });
 
-$('#btn').on('click', function(){
-    console.log("You're about to start!");
-})
-var time=30;
-var timer;
-var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, chD, correct = 0;
-var questions = [
-      ["- Which method returns the string starting at the specified position?","substr()","getSubstring()", "slice()", "None of the above","A"],
-      ["- Which of the following is a valid type of function javascript supports?","named function","anonymous function","both of the above","none of the above","C"],
-      ["- Which built-in method returns the character at the specified index?","characterAt()","getCharAt()", "charAt()", "None of the above", "C"],
-      ["- Which built-in method returns the calling string value converted to upper case?","toUpperCase()"," toUpper()"," changeCase(case)","None of the above.","A",],
-      ["- Which of the following function of Number object returns the number's value?","toString()","valueOf()"," toLocaleString()"," toPrecision()","B",],
-      ["- Which of the following function of String object returns the index within the calling String object of the last occurrence of the specified value?","lastIndexOf()","search()","substr()"," indexOf()","A",],
-      ["- Which of the following function of String object creates a string to be displayed as bold as if it were in a <b> tag?","anchor()","big()","blink()","bold()","D",],
-      ["- Which of the following function of String object causes a string to be displayed as a subscript, as if it were in a <sub> tag?","sup()","small()","strike()","sub()","D",],
-      ["- Which of the following function of Array object calls a function for each element in the array?","concat()","every()","filter()","forEach()","D",],
-      ["- Which of the following function of Array object removes the first element from an array and returns that element?","reverse()","shift()","slice()","some()","B",]
+// NEXT BUTTONS
+var nextone = document.getElementById('nextone');
+var nexttwo = document.getElementById('nexttwo');
+var nextthree = document.getElementById('nextthree');
+var nextfour = document.getElementById('nextfour');
+var nextfive = document.getElementById('nextfive');
+var nextsix = document.getElementById('nextsix');
+var nextseven = document.getElementById('nextseven');
+var nexteight = document.getElementById('nexteight');
+var nextnine = document.getElementById('nextnine');
+var nextten = document.getElementById('nextten');
 
-];
-function _(quiz){
-    return document.getElementById(quiz);
-}
-function renderQuestion() {
-    test = _("test");
-    if(pos >= questions.length){
-        test.innerHTML = "<h2><center>You got :" + (correct/questions.length)*100 + "%"+"<br>" +
-        "Number of correct questions is:"+correct+"<br>"+" Total Number of Questions is: "+ questions.length+"</center></h2>";
-        
-        _("test_status").innerHTML = "<center>Test Completed</center>";
-        pos = 0;
-        correct = 0;
-        return false;
-    }
-    _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
-    question = questions[pos][0];
-    chA = questions[pos][1];
-    chB = questions[pos][2];
-    chC = questions[pos][3];
-    chD = questions[pos][4];
-    test.innerHTML = "<h3>" + "question:"+(pos+1)+")"+" " +question+"</h3>";
-    test.innerHTML +="<input type='radio' name='choices' value='A'> "+chA+"<br>"; 
-    test.innerHTML +="<input type='radio' name='choices' value='B'> "+chB+"<br>"; 
-    test.innerHTML +="<input type='radio' name='choices' value='C'> "+chC+"<br>";  
-    test.innerHTML +="<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
-    test.innerHTML +="<button onclick='checkAnswer()'>Submit Answer</button>";
-    test.innerHTML +="<button onclick='back()'>Previous Quiz</button>";
+//PREVIOUS BUTTONS
+var previousone = document.getElementById('previousone');
+var previoustwo = document.getElementById('previoustwo');
+var previousthree = document.getElementById('previousthree');
+var previousfour = document.getElementById('previousfour');
+var previousfive = document.getElementById('previousfive');
+var previoussix = document.getElementById('previoussix');
+var previousseven = document.getElementById('previousseven');
+var previouseight = document.getElementById('previouseight');
+var previousnine = document.getElementById('previousnine');
+var previousten = document.getElementById('previousten');
 
+// QUESTIONS
+var questionTwo = document.getElementById('questionTwo')
+var questionOne = document.getElementById('questionOne')
+var questionThree = document.getElementById('questionThree')
+var questionFour = document.getElementById('questionFour')
+var questionFive = document.getElementById('questionFive')
+var questionSix = document.getElementById('questionSix')
+var questionSeven = document.getElementById('questionSeven')
+var questionEight = document.getElementById('questionEight')
+var questionNine = document.getElementById('questionNine')
+var questionTen = document.getElementById('questionTen')
+
+
+// MESSAGE;
+var message = document.getElementById('message');
+//FUNCTIONS
+function check(){
+    document.write("never give up!");
 }
 
-function back() {
-    choices = document.getElementsByName("choices");
-    for (var i=0; i<choices.length; i++)
+// ADD EVENTLISTENERS;
+//Next Quiz Event
+previoustwo.onclick = () => {
+    questionTwo.style.display = 'none'
+    questionOne.style.display = 'block'
+}
+previousthree.onclick = () => {
+    questionThree.style.display = 'none'
+    questionTwo.style.display = 'block'
+}
+previousfour.onclick = () => {
+    questionFour.style.display = 'none'
+    questionThree.style.display = 'block'
+}
+previousfive.onclick = () => {
+    questionFive.style.display = 'none'
+    questionFour.style.display = 'block'
+}
+previoussix.onclick = () => {
+    questionSix.style.display = 'none'
+    questionFive.style.display = 'block'
+}
+previousseven.onclick = () => {
+    questionSeven.style.display = 'none'
+    questionSix.style.display = 'block'
+}
+previouseight.onclick = () => {
+    questionEight.style.display = 'none'
+    questionSeven.style.display = 'block'
+}
+previousnine.onclick = () => {
+    questionNine.style.display = 'none'
+    questionEight.style.display = 'block'
+}
+previousten.onclick = () => {
+    questionTen.style.display = 'none'
+    questionNine.style.display = 'block'
+}
+
+//Next Question Event
+nextone.onclick = () => {
+
+    questionOne.style.display = 'none'
+    questionTwo.style.display = 'block'
+}
+nexttwo.onclick = () => {
+    questionTwo.style.display = 'none'
+    questionThree.style.display = 'block'
+}
+nextthree.onclick = () => {
+    questionThree.style.display = 'none'
+    questionFour.style.display = 'block'
+}
+nextfour.onclick = () => {
+    questionFour.style.display = 'none'
+    questionFive.style.display = 'block'
+}
+nextfive.onclick = () => {
+    questionFive.style.display = 'none'
+    questionSix.style.display = 'block'
+}
+nextsix.onclick = () => {
+    questionSix.style.display = 'none'
+    questionSeven.style.display = 'block'
+}
+nextseven.onclick = () => {
+    questionSeven.style.display = 'none'
+    questionEight.style.display = 'block'
+}
+nexteight.onclick = () => {
+    questionEight.style.display = 'none'
+    questionNine.style.display = 'block'
+}
+nextnine.onclick = () => {
+    questionNine.style.display = 'none'
+    questionTen.style.display = 'block'
+}
+nextten.onclick = () => {
+    questionTen.style.display = 'none'
+    questionTen.style.display = 'block'
+}
+
+//function to calculate results
+function calResults(e){
+    if(e.innerHTML===questionBank[i].answer && results<questionBank.length)
+{
+    results=results+1;
+    document.getElementById(e.id).style.background= 'limegreen'
+}
+  else{
+    document.getElementById(e.id).style.background='tomato';
+  }
+  setTimeout(nextQuestion,300);
+}
+//back to quiz button event
+function backToQuiz(){
+    location.reload();
+}
+//check answers button event
+function checkAnswer(){
+    var answerBank=document.getElementById("answerBank");
+    var answers=document.getElementById("answers");
+    answerBank.style.display='block';
+    result.style.display='block';
+    for (var a=0;a<questionBank.length;a++)
     {
-        if (choices[i].checked)
-        {
-            choice = choices[i].Value
-        }
+       var list=document.createElement('li');
+       list.innerHTML=questionBank[a].answer;
     }
-    if(choice == questions [pos] [5]){
-        correct--;
-        
-    }
-    if (pos>0)
-    {
-        pos--;
-    }
-    else
-    {
-        pos;
-    }
-    renderQuestion();
 }
 
-function checkAnswer () {
+// SUBMIT QUESTIONS
+var submitOne = document.getElementById('submitone');
+var submitTwo = document.getElementById('submittwo');
+var submitThree = document.getElementById('submitthree');
+var submitFour = document.getElementById('submitfour');
+var submitFive = document.getElementById('submitfive');
+var submitSix = document.getElementById('submitsix');
+var submitSeven = document.getElementById('submitseven');
+var submitEight = document.getElementById('submiteight');
+var submitNine = document.getElementById('submitnine');
+var submitTen = document.getElementById('submitten');
 
-    choices = document.getElementsByName("choices");
-    for (var i=0; i<choices.length; i++){
-        if (choices[i].checked){
-            choice = choices[i].arialValueMax;
-        }
+// ONCLICK RADIO BUTTONS
+// QUESTIONONE
+var answerOne = document.getElementById('answerone')
+var answerTwo = document.getElementById('answertwo')
+var answerThree = document.getElementById('answerthree')
+var answerFour = document.getElementById('answerfour')
+
+// SUBMIT EVENTLISTNERS;
+
+var answers = [];
+var marks = 0
+submitOne.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'correctanswer'
     }
-    if(choice == questions [pos] [5]){
-        correct++;
-        
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
     }
-    pos++;
-    renderQuestion() ;
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
 }
-window.addEventListener("load",renderQuestion, false);
+submitTwo.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitThree.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitFour.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitFive.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitSix.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitSeven.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'correctanswer'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitEight.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'correctanswer'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitNine.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'correctanswer'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+submitTen.onclick = () => {
+
+     
+    if(answerOne.checked == true) {
+
+        oneCorrectAnswer = 'notcorect'
+    }
+    else if( answerTwo.checked == true){
+
+        oneCorrectAnswer = 'correctanswer'
+    }
+    else if(answerThree.checked == true) {
+        oneCorrectAnswer = 'notcorect'
+    }
+    else {
+        oneCorrectAnswer = 'notcorect'
+    }
+
+    if(oneCorrectAnswer == 'correctanswer') {
+
+        marks++
+        answers.push(marks);
+        console.log(marks);
+        console.log(answers);
+
+        message.style.display = 'block'
+    }
+    else {
+        marks = 0
+        answers.push(marks)
+        console.log(marks);
+        console.log(answers);
+    }
+}
+//RESULTS COMPILATION
+var result=document.getElementById("result");
+var points =document.getElementById("results");
+var span=document.querySelectorAll("span");
+var questionBank=document.querySelectorAll("questionBank");
+var stat=document.getElementById("stat");
+var i=0;
+var results=0;
+
+//function in display quizes
 
 
-    
+
+
