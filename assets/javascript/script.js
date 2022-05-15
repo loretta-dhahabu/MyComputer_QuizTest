@@ -45,7 +45,8 @@ var questionTen = document.getElementById('questionTen')
 var message = document.getElementById('message');
 //FUNCTIONS
 function check(){
-    document.write("never give up!");
+
+document.write(c);
 }
 
 // ADD EVENTLISTENERS;
@@ -127,11 +128,11 @@ nextnine.onclick = () => {
 }
 nextten.onclick = () => {
     questionTen.style.display = 'none'
-    questionTen.style.display = 'block'
+    result.style.display = 'block'
 }
 
 //function to calculate results
-function calResults(e){
+function calcResults(e){
     if(e.innerHTML===questionBank[i].answer && results<questionBank.length)
 {
     results=results+1;
@@ -522,6 +523,8 @@ submitTen.onclick = () => {
         console.log(answers);
     }
 }
+
+
 //RESULTS COMPILATION
 var result=document.getElementById("result");
 var points =document.getElementById("results");
