@@ -566,6 +566,8 @@ var answerThirtyEight = document.getElementById('answerthirtyeight')
 var answerThirtyNine = document.getElementById('answerthirtynine')
 var answerFourty = document.getElementById('answerfourty')
 
+var finalResult = document.getElementById("results")
+
 submitTen.onclick = () => {
 
      
@@ -591,6 +593,14 @@ submitTen.onclick = () => {
         console.log(marks);
         console.log(answers);
 
+        var totalResults = answers.reduce((acc,curr) => {
+            return acc+curr
+        })
+        console.log (totalResults)
+        var result = (totalResults / answers.length) * 100
+        finalResult.innerHTML=result
+        console.log(result)
+
         message.style.display = 'block'
     }
     else {
@@ -601,16 +611,8 @@ submitTen.onclick = () => {
     }
 }
 
-for()
 
 //RESULTS COMPILATION
-var result=document.getElementById("result");
-var points =document.getElementById("results");
-var span=document.querySelectorAll("span");
-var questionBank=document.querySelectorAll("questionBank");
-var stat=document.getElementById("stat");
-var i=0;
-var results=0;
 
 
 
