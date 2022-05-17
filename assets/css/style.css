@@ -86,59 +86,58 @@ body{
     padding: 70px;
     width: fit-content;
     margin-bottom: 10px;
-    background-color: lightcyan;
 }
 
 .questiontwo {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionthree {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionfour {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionfive {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionsix {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionseven{
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questioneight {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionnine {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
 }
 .questionten {
-    border: 1px solid red;
+    border: 1px solid black;
     padding: 70px;
     width: fit-content;
     display: none;
