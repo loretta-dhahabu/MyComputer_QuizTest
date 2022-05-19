@@ -4,10 +4,6 @@ $(document).ready(function(){
     });      
 });
 
-//get satrted button event
-getStarted.onclick = () => {
-    questionOne.style.display = 'block'
-}
 
 // NEXT BUTTONS
 var nextone = document.getElementById('nextone');
